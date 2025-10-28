@@ -1,0 +1,10 @@
+<h1>Authors</h1>
+
+<% @authors.each do |author| %>
+  <h2><%= author.name %></h2>
+  <ul>
+    <% author.posts.each do |post| %>
+      <li><%= post.title %></li>
+    <% end %>
+  </ul>
+<% end %>

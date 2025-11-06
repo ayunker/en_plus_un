@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a repo to demonstrate the impacts N+1s can have on Rails apps. It was
+built to support this blog post: [].
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+* `bundle install`
+* `bundle exec rails db:setup`
 
-* System dependencies
+## Usage
 
-* Configuration
+The `justfile` automates the usage:
 
-* Database creation
+* `just reset_data` purges any existing data and then runs the `generate_data`
+rake task.
+* `just benchmark` curls each endpoint and prints the execution time for each
+(don't forget to start the server!)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can adjust `generate_data.rake` to create whatever size datasets you want
+to benchmark all the things.

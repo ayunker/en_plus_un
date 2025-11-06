@@ -43,6 +43,7 @@ gem "image_processing", "~> 1.2"
 gem "rspec-rails"
 
 group :development, :test do
+  gem "standard", ">= 1.35.1"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
 

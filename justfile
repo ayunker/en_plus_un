@@ -1,5 +1,5 @@
 server:
-	bundle exec rails server
+	bundle exec rails server -p 3002
 alias s := server
 
 console:
@@ -19,3 +19,4 @@ benchmark:
 
 	echo "OPTIMIZED"
 	time curl --silent -o /dev/null localhost:3002/authors/optimized
+alias bm := benchmark

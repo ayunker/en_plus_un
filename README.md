@@ -19,3 +19,29 @@ rake task.
 
 You can adjust `generate_data.rake` to create whatever size datasets you want
 to benchmark all the things.
+
+## Benchmarks
+
+### 100 Authors, 10 Posts per Author, 5 Tags per Post
+
+UNOPTIMIZED
+time curl --silent -o /dev/null localhost:3002/authors/unoptimized
+
+real    0m1.007s
+user    0m0.004s
+sys     0m0.006s
+
+PARTIALLY OPTIMIZED
+time curl --silent -o /dev/null localhost:3002/authors/partially_optimized
+
+real    0m0.678s
+user    0m0.002s
+sys     0m0.003s
+
+OPTIMIZED
+time curl --silent -o /dev/null localhost:3002/authors/optimized
+
+real    0m0.126s
+user    0m0.002s
+sys     0m0.003s
+
